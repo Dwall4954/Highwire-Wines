@@ -1,8 +1,10 @@
 /* --- Global Styles --- */
 body {
-    background-color: #FAF9F6; /* Off-white, parchment color */
-    font-family: Georgia, serif; /* Classic, elegant serif font */
-    color: #3D3D3D; /* Dark grey for text */
+    /* CHANGED: New background color from your label */
+    background-color: #8C3C3C; 
+    font-family: Georgia, serif;
+    /* CHANGED: Light text color for readability on dark background */
+    color: #F5F5F5; 
     margin: 0;
     text-align: center;
 }
@@ -10,7 +12,8 @@ body {
 /* --- Typography --- */
 h1, h2 {
     font-family: 'Times New Roman', Times, serif;
-    color: #800000; /* Deep, wine-red color */
+    /* CHANGED: Lighter color for headings */
+    color: #FAF9F6;
 }
 
 /* --- Layout Containers --- */
@@ -26,12 +29,15 @@ h1, h2 {
     background-size: cover;
     color: white;
     padding: 100px 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
-    font-size: 4em;
-    color: white; /* White text for the hero image */
+    /* CHANGED: New font, size, and color */
+    font-family: 'Great Vibes', cursive;
+    font-size: 7em; /* Made font larger to stand out */
+    color: #000000; /* Black color as requested */
+    /* CHANGED: Updated text shadow to work with black text */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
     margin: 0;
 }
 
@@ -44,11 +50,13 @@ h1, h2 {
 }
 
 .wine-card {
-    background: #FFFFFF;
+    /* CHANGED: Background color to contrast with the new body background */
+    background: #FAF9F6;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-decoration: none;
+    /* CHANGED: Dark text for inside the card */
     color: #3D3D3D;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -60,6 +68,9 @@ h1, h2 {
 
 .wine-card img {
     width: 100%;
+    /* ADDED: These two lines make all images the same size without stretching */
+    height: 350px;
+    object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -77,10 +88,15 @@ h1, h2 {
     text-align: left;
     gap: 40px;
     margin-top: 30px;
+    /* ADDED: Background and padding for better readability on individual pages */
+    background: #FAF9F6;
+    padding: 30px;
+    border-radius: 5px;
+    color: #3D3D3D;
 }
 
 .wine-page .label-image {
-    flex: 1 1 400px; /* Flexbox for responsive columns */
+    flex: 1 1 400px;
 }
 
 .wine-page .label-image img {
@@ -93,11 +109,17 @@ h1, h2 {
     flex: 1 1 400px;
 }
 
+/* CHANGED: The h1 and details on wine pages should be dark for readability */
+.wine-page h1, .wine-page h2 {
+    color: #8C3C3C;
+}
+
 /* --- Navigation Link --- */
 .back-link {
     display: inline-block;
     margin-top: 40px;
     text-decoration: none;
-    color: #800000;
+    color: #FAF9F6; /* Light color to show up on maroon background */
     font-weight: bold;
+    font-size: 1.1em;
 }
