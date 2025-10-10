@@ -1,9 +1,8 @@
 /* --- Global Styles --- */
 body {
-    /* CHANGED: New background color from your label */
-    background-color: #8C3C3C; 
+    /* CHANGED: New background color as requested */
+    background-color: #4d0000; 
     font-family: Georgia, serif;
-    /* CHANGED: Light text color for readability on dark background */
     color: #F5F5F5; 
     margin: 0;
     text-align: center;
@@ -12,7 +11,6 @@ body {
 /* --- Typography --- */
 h1, h2 {
     font-family: 'Times New Roman', Times, serif;
-    /* CHANGED: Lighter color for headings */
     color: #FAF9F6;
 }
 
@@ -32,11 +30,9 @@ h1, h2 {
 }
 
 .hero h1 {
-    /* CHANGED: New font, size, and color */
     font-family: 'Great Vibes', cursive;
-    font-size: 7em; /* Made font larger to stand out */
-    color: #000000; /* Black color as requested */
-    /* CHANGED: Updated text shadow to work with black text */
+    font-size: 7em;
+    color: #000000;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
     margin: 0;
 }
@@ -50,13 +46,11 @@ h1, h2 {
 }
 
 .wine-card {
-    /* CHANGED: Background color to contrast with the new body background */
     background: #FAF9F6;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-decoration: none;
-    /* CHANGED: Dark text for inside the card */
     color: #3D3D3D;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -68,7 +62,6 @@ h1, h2 {
 
 .wine-card img {
     width: 100%;
-    /* ADDED: These two lines make all images the same size without stretching */
     height: 350px;
     object-fit: cover;
     border-top-left-radius: 5px;
@@ -88,7 +81,6 @@ h1, h2 {
     text-align: left;
     gap: 40px;
     margin-top: 30px;
-    /* ADDED: Background and padding for better readability on individual pages */
     background: #FAF9F6;
     padding: 30px;
     border-radius: 5px;
@@ -109,9 +101,9 @@ h1, h2 {
     flex: 1 1 400px;
 }
 
-/* CHANGED: The h1 and details on wine pages should be dark for readability */
 .wine-page h1, .wine-page h2 {
-    color: #8C3C3C;
+    /* CHANGED: Updated accent color to match new background */
+    color: #4d0000;
 }
 
 /* --- Navigation Link --- */
@@ -119,7 +111,7 @@ h1, h2 {
     display: inline-block;
     margin-top: 40px;
     text-decoration: none;
-    color: #FAF9F6; /* Light color to show up on maroon background */
+    color: #FAF9F6;
     font-weight: bold;
     font-size: 1.1em;
 }
