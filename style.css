@@ -11,7 +11,7 @@ body {
     font-family: 'Georgia', 'Times New Roman', serif;
     color: var(--light-text);
     margin: 0;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
 }
 
 /* --- Typography --- */
@@ -20,9 +20,9 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* --- NEW: Site Header --- */
+/* --- Site Header --- */
 .site-header {
-    background-color: rgba(0, 0, 0, 0.2); /* Subtle dark background */
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -30,7 +30,7 @@ h1, h2, h3 {
 
 .site-header h1 {
     font-family: 'Pinyon Script', cursive;
-    font-size: 4.5em; /* Adjusted size for a header bar */
+    font-size: 4.5em;
     color: var(--off-white);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -44,7 +44,7 @@ h1, h2, h3 {
 }
 
 .year-section {
-    margin-bottom: 60px; /* More space between years */
+    margin-bottom: 60px;
 }
 
 .year-section h2 {
@@ -56,13 +56,11 @@ h1, h2, h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* --- MODIFIED: Wine Card Design --- */
+/* --- Wine Card Design --- */
 .wine-gallery {
     display: grid;
-    /* More columns on larger screens */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 40px;
-    /* ADDED: Center items in the grid, useful when there are fewer items than columns */
     justify-items: center; 
 }
 
@@ -72,11 +70,10 @@ h1, h2, h3 {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     color: var(--dark-text);
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* ADDED: Max width to prevent single cards from stretching too wide */
     max-width: 320px; 
 }
 
@@ -107,35 +104,42 @@ h1, h2, h3 {
     color: var(--dark-text);
 }
 
-/* --- MODIFIED: Individual Wine Page --- */
+/* --- MODIFIED: Individual Wine Page Layout --- */
 .wine-page-content {
     background: var(--off-white);
     color: var(--dark-text);
     border-radius: 8px;
     padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 40px;
-    align-items: start;
+    display: flex; /* Changed to flex for single column */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 30px; /* Space between elements */
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    .wine-page-content {
-        grid-template-columns: repeat(2, 1fr); 
-    }
+.wine-page-content .label-image {
+    max-width: 400px; /* Control max width of the image */
+    width: 100%; /* Ensure it's responsive */
+    margin-bottom: 20px; /* Space below the label */
 }
 
 .wine-page-content img {
     width: 100%;
+    height: auto; /* Ensure image scales properly */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.wine-page-content .details {
+    max-width: 700px; /* Control max width of the text block */
+    width: 100%;
+    text-align: left; /* Text remains left-aligned within its block */
+}
+
 .wine-page-content h1 {
     color: var(--maroon);
-    font-size: 3em;
+    font-size: 3.5em; /* Slightly larger title */
     margin-bottom: 5px;
+    text-align: center; /* Center the wine title */
 }
 
 .wine-page-content .appellation {
@@ -143,16 +147,33 @@ h1, h2, h3 {
     color: #666;
     margin-top: 0;
     margin-bottom: 30px;
+    text-align: center; /* Center the appellation */
+    font-size: 1.1em;
+}
+
+.wine-page-content h2 {
+    color: var(--maroon);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center; /* Center the subheadings */
+}
+
+.wine-page-content p, .wine-page-content ul {
+    margin-bottom: 20px;
 }
 
 .wine-page-content ul {
     list-style: none;
     padding: 0;
+    width: fit-content; /* Make ul only as wide as its content */
+    margin-left: auto; /* Center the list */
+    margin-right: auto; /* Center the list */
 }
 
 .wine-page-content ul li {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
+    text-align: left; /* Ensure list items are left-aligned */
 }
 
 .back-button {
@@ -173,7 +194,7 @@ h1, h2, h3 {
     color: var(--maroon);
 }
 
-/* --- NEW: Site Footer --- */
+/* --- Site Footer --- */
 .site-footer {
     text-align: center;
     padding: 30px 20px;
