@@ -62,6 +62,8 @@ h1, h2, h3 {
     /* More columns on larger screens */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 40px;
+    /* ADDED: Center items in the grid, useful when there are fewer items than columns */
+    justify-items: center; 
 }
 
 .wine-card {
@@ -70,10 +72,12 @@ h1, h2, h3 {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     color: var(--dark-text);
-    overflow: hidden; /* Ensures child elements respect the border radius */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ADDED: Max width to prevent single cards from stretching too wide */
+    max-width: 320px; 
 }
 
 .wine-card:hover {
@@ -81,16 +85,15 @@ h1, h2, h3 {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* NEW: This container ensures all images are perfectly sized and spaced */
 .card-image-container {
-    background-color: #e8e6e1; /* A neutral background for the labels */
+    background-color: #e8e6e1; 
     padding: 20px;
 }
 
 .wine-card img {
     width: 100%;
-    height: auto; /* Let height adjust automatically */
-    display: block; /* Removes extra space below image */
+    height: auto; 
+    display: block; 
 }
 
 .card-info {
@@ -111,7 +114,7 @@ h1, h2, h3 {
     border-radius: 8px;
     padding: 40px;
     display: grid;
-    grid-template-columns: 1fr; /* Default for mobile */
+    grid-template-columns: 1fr; 
     gap: 40px;
     align-items: start;
 }
@@ -119,7 +122,7 @@ h1, h2, h3 {
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .wine-page-content {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
@@ -152,7 +155,6 @@ h1, h2, h3 {
     border-bottom: 1px solid #eee;
 }
 
-/* NEW: A better-looking back button */
 .back-button {
     display: inline-block;
     margin-top: 40px;
