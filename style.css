@@ -83,7 +83,8 @@ h1, h2, h3 {
 }
 
 .card-image-container {
-    background-color: #e8e6e1; 
+    /* CHANGED: New tan background color */
+    background-color: #EEE8D5; 
     padding: 20px;
 }
 
@@ -137,7 +138,7 @@ h1, h2, h3 {
 
 .wine-page-content h1 {
     color: var(--maroon);
-    font-size: 3.0em; /* CHANGED: Reduced desktop font size */
+    font-size: 3.0em;
     margin-bottom: 5px;
     text-align: center;
 }
